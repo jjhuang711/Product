@@ -1,0 +1,235 @@
+/*------------universal/big section --------------------*/
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+.product {
+  width: 825px;
+  border: 5px solid black;
+  margin: 50px auto;
+}
+
+/* .margin-left {
+  margin-left: 10px;
+} */
+
+/*----------------small section--------------------------*/
+.product-name {
+  background-color: #f7f7f7;
+  text-align: center;
+  font-size: 26px;
+  text-transform: uppercase;
+  padding: 15px;
+  position: relative;
+}
+
+.product-price {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.product-shipping {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #777;
+  font-size: 12px;
+}
+
+.color {
+  background-color: black;
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+
+  /*removed to implement flexbox*/
+  /* display: inline-block; 
+  margin-right: 5px; */
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.brown {
+  background-color: brown;
+}
+
+/*removed after CSS Grid*/
+/* .variant {
+  margin-bottom: 30px;
+} */
+
+h3 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.detail-list {
+  list-style: square;
+}
+
+.detail-list li {
+  margin-bottom: 10px;
+}
+
+/*----------------pseudo and links -----------------------*/
+.product-name::before {
+  content: "SALE";
+  background-color: red;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  display: inline-block;
+  letter-spacing: 2px;
+  padding: 5px 20px;
+  border: 4px solid black;
+  position: absolute;
+  top: -25px;
+  left: -30px;
+}
+
+.product-link:link,
+.product-link:visited {
+  color: black;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.product-link:hover,
+.product-link:active {
+  text-decoration: none;
+}
+
+.add-to-cart {
+  width: 100%;
+  color: white;
+  background-color: black;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px;
+  cursor: pointer;
+  border-top: 5px solid black;
+}
+
+.add-to-cart:hover {
+  color: black;
+  background-color: white;
+}
+
+/*-----------------CSS flexbox----------------------------*/
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* .margin-left {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+} */
+
+.product-color {
+  display: flex;
+  gap: 10px;
+}
+
+/* .container1 {
+  flex: 1;
+  align-self: center;
+}
+
+.container2 {
+  flex: 1;
+  margin: 10px 0;
+}
+
+.container3 {
+  flex: 1;
+  margin: 10px 0;
+} */
+
+/*-----------------CSS Grids----------------------------*/
+
+.product {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  /* grid-template-rows: auto 250px auto; */
+  column-gap: 20px;
+  /* row-gap: 10px; */
+  justify-content: center;
+}
+
+.product-name {
+  grid-column: 1/-1;
+}
+
+.add-to-cart {
+  grid-column: 1/-1;
+}
+
+/* To debug the white space below img inside a div container, use vertical-align:bottom, or change to display:block*/
+.product-photo {
+  vertical-align: bottom;
+}
+
+/*----------------floats (outdated)----------------------*/
+/* .container1 {
+  float: left;
+  width: 34%;
+}
+
+.container2 {
+  float: left;
+  width: 33%;
+  padding: 0 40px;
+}
+
+.container3 {
+  float: left;
+  width: 33%;
+}
+
+.product-price {
+  float: left;
+}
+
+.product-shipping {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+} */
+
+/* .clearfix::after{
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.margin-left{
+  background-color: red;
+} */
